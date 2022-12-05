@@ -1,0 +1,44 @@
+Variable:
+	Veriable is a name(alias) given to the specific
+	memory location it has been initialized to.
+
+Literal:
+	Any constant value which can be assigned to the variable is called literal/constant. 
+	 Literals in Java is a synthetic representation of boolean, numeric, character, or string data.
+
+
+Example:
+	int a=20;
+
+	Here, 'a' is a variable & '20' is an integer literal.
+
+Types if Literals in Java:
+	1) Integral literal(byte,short,long,int) 
+		Can be specified in 4 ways:
+			1. Decimal(base 10)
+				example: int a=121;
+			2. Octal(base 8)
+				The octals literals should be prefixed with 0(zero).
+				example: int a= 0256;
+			3. Hexa-decimal(base 16)
+				Hexadecimal literals should be prefixed either 0x or 0X
+				example: int a= 0xA25F;
+			4. Binary literals
+				Should be prefixed with 0b
+				example: int a=0b0110;
+	2) Floating point literals
+		Can be specified only in base 10
+			example: double d=186.667;
+	3) Char literals
+		Can be specified in the following 4 ways:
+			1) Single quote
+				example: char ch='a';
+			2)Char literal as Integral Literal:
+				example: char ch=046;
+			3) Unicode representation
+				example: char ch= '\u0061';
+			4)Escape sequence
+				example: char ch='\n';
+	4) String literals: Any sequence of characters can be treated as string literal
+	5) Boolean Literal:
+		Only 2 values are allowed for boolean literal , true & false
