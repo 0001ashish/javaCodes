@@ -24,5 +24,13 @@ class Driver{
 		MultiThreads m2=new MultiThreads(10);
 		m1.start();
 		m2.start();
+
+		try{
+			m1.join();
+			m2.join();
+		}
+		catch(InterruptedException e){}
+
+		System.out.println("Exiting Main");
 	}
 }

@@ -1,19 +1,26 @@
+import java.time.Duration;
+
 class PasswordBreaker extends Thread{
 	int base;
+	static int count=0;
 	static boolean found=false;
 	Bank ref=new Bank();
 	PasswordBreaker(int b,Bank ref){base=b;this.ref=ref;}
 	public void run(){
+		count++;
 		for(int i=base;i<base+100;i++){
-
 			if(found){
 				break;
 			}
 			if(ref.login(i)){
 				found=true;
+				try{
+					this.sleep(10000);
+				}catch(InterruptedException e){}
 				System.out.println("Password: "+i);
 			}
 		}
+		System.out.println("Exiting "+this.getName());
 	}
 }
 class Driver{
@@ -21,7 +28,19 @@ class Driver{
 		Bank b1=new Bank();
 		PasswordBreaker [] p=new PasswordBreaker[10];
 		for(int i=0;i<10;i++){
+			p[i]= new PasswordBreaker(i*100,b1);
 			p[i].start();
-		}	
+		}
+		try{
+			p[0].join();
+		}
+			
+		catch(Exception e){
+			System.out.println("Interrupted...");
+		}
+
+		System.out.println("Is alive: "+p[0].isAlive());
+		System.out.println("Count: "+PasswordBreaker.count);
+			
 	}
 }
