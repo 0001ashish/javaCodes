@@ -9,7 +9,7 @@ class Printer{
 		
 	}
 }
-
+ 
 class DocGenerator implements Runnable{
 	Printer hpLaser;
 	String content;
