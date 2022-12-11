@@ -1,0 +1,13 @@
+Reflection is commonly used by programs which require the ability to examine or modify the runtime behavior of applications running in java virtual machine. 
+
+The java.lang.Class class provides many methods that can be used to get metadata and to examine & change the runtime behavior of a class.
+
+java.lang and java.lang.reflect packages provide classes for java reflection.
+
+Classes:
+	Every type is either a reference or a primitive. Classes, enums and arrays(all inherit from java.lang.Object) as well as interfaces are all reference types. Examples of reference types include java.lang.String, all of the wrapper classes for primitive types such as java.lang.Double, the interface java.lang.Serializable and the enum java.swing.SortOrder .
+	There is a fixed set of primitive types: boolean, byte, short, int, long, float, double, char
+
+Now, for every type of object, the java Virtual Machine instantiates an immutable instance of java.lang.Class which provides methods to examine the runtime properties of objects including its members and type information.
+
+Most importantly, Class is entry point for all the reflection APIs.

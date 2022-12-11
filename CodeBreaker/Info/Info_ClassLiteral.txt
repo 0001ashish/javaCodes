@@ -1,0 +1,7 @@
+class Literal:
+	A class literal is an expression consisting of the name of a class, interface, array, or primitive type, or the pseudo-type void, followed by a '.' and the token class. 
+
+The type of C.class, where C is the name of a class, interface, or array type, is Class<C>. 
+The type of p.class, where p is the name of a primitive type, is Class<B>, where B is the type of an expression of type p after boxing conversion.
+
+The type of void.class is Class<Void>. 
