@@ -22,7 +22,7 @@ public class NewtonRaphson{
 		while(abs(fun)>precision){
 			x=x-(fun/der);
 			fun=x*x-num;
-			der=2*x;
+			der=2*x; 
 			ctr++;
 		}
 		System.out.println("Steps: "+ctr);
