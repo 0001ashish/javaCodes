@@ -21,6 +21,7 @@ class Driver{
 		Bank b1=new Bank();
 		PasswordBreaker [] p=new PasswordBreaker[10];
 		for(int i=0;i<10;i++){
+			p[i]= new PasswordBreaker(i*100,b1);
 			p[i].start();
 		}	
 	}
